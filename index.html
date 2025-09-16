@@ -1,139 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Dappa Tamuno Opubo — AI Portfolio</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dappa Tamuno Opubo | AI Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-  <aside class="sidebar">
-    <div class="logo">Dappa Tamuno Opubo</div>
-    <div style="display:flex;gap:10px;align-items:center">
-      <div class="avatar"><img src="assets/avatar.svg" alt="avatar" style="width:100%;height:100%;display:block"></div>
-      <div>
-        <div style="font-weight:700">Tamuno Opubo Dappa</div>
-        <div style="color:var(--muted); font-size:13px">AI Researcher • ML Engineer • Product Builder</div>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="assets/avatar.svg" alt="Dappa Tamuno Opubo" class="profile-img">
+        <h2>Dappa Tamuno Opubo</h2>
+        <p>I am a professional with 5+ years of hands-on experience in production-level AI/ML engineering using cloud-native platforms and modern ML frameworks. I bring a unique blend of product thinking, technical execution, and domain adaptability</p>
       </div>
-    </div>
-    <nav class="nav">
-      <a href="#home" class="active">Home</a>
-      <a href="#applai">Applai Grants</a>
-      <a href="#sunrisal">Sunrisal</a>
-      <a href="#cloud-movie">Cloud Movie Engine</a>
-      <a href="#youtube">YouTube Summarizer</a>
-      <a href="#more">Other Projects</a>
-    </nav>
-  </aside>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#applaigrants"><i class="fas fa-project-diagram"></i> Projects</a></li>
+          <li><a href="#accomplishments"><i class="fas fa-trophy"></i> Accomplishments</a></li>
+          <li><a href="mailto:dappatamunoopubo@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+          <li><a href="https://www.linkedin.com/in/tamuno-opubo-dappa-743490111" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/dappatamuno" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.kaggle.com/tamunoopubodappa" target="_blank"><i class="fab fa-kaggle"></i> Kaggle</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-  <main class="main">
-    <header class="header">
-      <div>
-        <div class="title">AI Portfolio — Projects & Demos</div>
-        <div class="bio">Practical AI & ML solutions: building open, production-ready systems with a focus on accessibility and impact.</div>
-      </div>
-      <div style="text-align:right">
-        <div style="font-weight:700">Available for consulting</div>
-        <div style="color:var(--muted); font-size:13px">Email: <span style='color:inherit'>replace-me@example.com</span></div>
-      </div>
-    </header>
+    <!-- Main content -->
+    <main class="content">
+      <h1>My Projects</h1>
 
-    <section id="home" class="card">
-      <h2 style="margin:0">Featured projects</h2>
-      <p class="details">A curated set of AI projects demonstrating production-ready engineering, containerized microservices, semantic search, and front-end integrations.</p>
-    </section>
+      <!-- Project 1 -->
+      <section id="applaigrants" class="project-card">
+        <img src="assets/kaban-app.png" alt="ApplaiGrants Project" class="project-img">
+        <h2>Applaigrants.com</h2>
+        <p><strong>Description:</strong> ApplaiGrants is a containerized AI service that helps users find and apply for grants. It features grant matching using semantic search (FAISS), proposal generation tailored to user profiles, and PDF parsing pipelines for grant documents. The system combines structured and unstructured data to recommend the best-fit grants for entrepreneurs, NGOs, and innovators.</p>
+        <p><strong>Tech Stack:</strong> FastAPI, PyPDF2 + OCR, Sentence Transformers, FAISS, Mistral 7B (quantized), Docker</p>
+        <p><a href="https://applaigrants.com/" target="_blank">🔗 View Project</a></p>
+      </section>
 
-    <section class="grid" style="margin-top:18px">
-      <!-- Applai Grants -->
-      <article id="applai" class="card">
-        <img class="project-img" src="assets/kaban-app.png" alt="Applai Grants Kanban UI" />
-        <div class="project-title">Applai Grants — Intelligent Grant Matching & Proposal Generator</div>
-        <div class="tech"><strong>Deliverables</strong>: Containerized AI microservice (FastAPI) with /match and /generate endpoints; FAISS embeddings; PDF parsing pipeline; matching logic; proposal formatter; error samples & retry logic.</div>
-        <div class="details">
-          <strong>What will be built</strong>: A lightweight, modular AI service that connects with Applai's platform to provide smarter grant matching using semantic vector search and tailored proposal generation from user pitch decks and profiles.
-          <ul>
-            <li>Smarter Grant Matching: semantic search + tag blending</li>
-            <li>Proposal Generation: section-by-section proposal drafts using open models</li>
-            <li>PDF Integration & profile enrichment</li>
-          </ul>
-          <strong>Tech stack</strong>: FastAPI (Python), PyPDF2 + OCR fallback, SentenceTransformers embeddings, FAISS (local), Mistral 7B (4-bit quantized), Docker.
-        </div>
-        <a class="btn" href="#applai-code">View code</a>
-      </article>
+      <!-- Project 2 -->
+      <section id="sunrisal" class="project-card">
+        <img src="assets/sunrisal.jpg" alt="Sunrisal Project" class="project-img">
+        <h2>Sunrisal.com</h2>
+        <p><strong>Description:</strong> Sunrisal tackles rural electrification with solar home systems powered by AI-driven profiling. The platform uses a machine learning app to ethically profile nano and MSMEs, tailoring PayGo payment plans based on socio-economic factors (income, gender, etc.). This promotes financial inclusion and increases electrification access for underserved communities.</p>
+        <p><strong>Tech Stack:</strong> React Native (mobile app), FastAPI (backend), PostgreSQL, Scikit-learn, Docker, AWS</p>
+        <p><a href="http://www.sunrisal.com" target="_blank">🔗 View Project</a></p>
+      </section>
 
-      <!-- Sunrisal -->
-      <article id="sunrisal" class="card">
-        <img class="project-img" src="assets/sunrisal_dash_home.png" alt="Sunrisal Dashboard" />
-        <div class="project-title">Sunrisal — Machine Learning for Rural Electrification</div>
-        <div class="tech"><strong>Role</strong>: Designing ML-powered customer profiling and PayGo payment plan generation to expand access to solar home systems.</div>
-        <div class="details">
-          Sunrisal combines solar home systems with an ethical ML profiling app to propose customized PayGo payment plans for Nano and MSMEs based on socio-economic factors (income, gender, location). After a tailored plan and downpayment, customers deploy the solar kit to power their business.
-          <p><strong>Suggested tech stack</strong>: FastAPI backend, PostgreSQL (or Supabase R2 for storage), Redis for caching, PyTorch/Transformers for lightweight models, Celery for background jobs, S3-compatible storage (R2), Docker + Kubernetes for deployment, USSD integration (Paga) for payments.</p>
-        </div>
-        <a class="btn" href="#sunrisal-code">View code</a>
-      </article>
+      <!-- Project 3 -->
+      <section id="cloud-movie-engine" class="project-card">
+        <img src="assets/movierecommendation.jpg" alt="Cloud Movie Engine Project" class="project-img">
+        <h2>Cloud Movie Engine</h2>
+        <p><strong>Description:</strong> Cloud Movie Engine is a Movie Recommendation System. Instead of showing random movies, it learns relationships between movies based on their content (title, genre, description, etc.) and recommends movies that are similar to one the user has shown interest in (seed movie)</p>
+        <p><strong>Tech Stack:</strong> FastAPI, Docker, Kubernetes (Minikube), React, Vercel, MovieLens Dataset</p>
+        <p><a href="https://github.com/dappatamuno/movie-recommender-full.git" target="_blank">🔗 View Repository</a></p>
+      </section>
 
-      <!-- Cloud Movie Engine -->
-      <article id="cloud-movie" class="card">
-        <div style="height:160px; display:flex; align-items:center; justify-content:center; background:#fff6ed; border-radius:8px;">
-          <div style="text-align:center">
-            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="60" cy="60" r="56" fill="#111827" opacity="0.06"/>
-              <text x="50%" y="48%" font-size="16" text-anchor="middle" fill="#0b1220" font-weight="700">Cloud</text>
-              <text x="50%" y="70%" font-size="12" text-anchor="middle" fill="#0b1220">Movie Engine</text>
-            </svg>
+      <!-- Project 4 -->
+      <section id="youtube-summarizer" class="project-card">
+        <img src="assets/youtube.png" alt="YouTube Summarizer Project" class="project-img">
+        <h2>YouTube Summarizer</h2>
+        <p><strong>Description:</strong> A tool that generates concise summaries of YouTube videos. It fetches transcripts, applies NLP summarization models, and provides users with short, structured summaries. Useful for quickly understanding long-form content without watching the full video.</p>
+        <p><strong>Tech Stack:</strong> Python, Hugging Face Transformers, FastAPI, Streamlit (frontend)</p>
+        <p><a href="https://github.com/dappatamuno/Youtube-Video-Transcript-Summarizer-Using-AI.git" target="_blank">🔗 View Repository</a></p>
+      </section>
+
+      <!-- Project 5 -->
+      <section id="mental-health-bot" class="project-card">
+        <img src="assets/mindease.jpg" alt="Mental Health Bot Project" class="project-img">
+        <h2>Mental Health Bot</h2>
+        <p><strong>Description:</strong> A conversational chatbot designed to provide mental health support and resources. It leverages NLP to understand user queries, offer empathetic responses, and connect users to mental health information and services.</p>
+        <p><strong>Tech Stack:</strong> Python, Hugging Face Transformers, FastAPI, Docker</p>
+        <p><a href="https://github.com/dappatamuno/Mental-Health-Bot.git" target="_blank">🔗 View Repository</a></p>
+      </section>
+
+      <!-- Project 6 -->
+      <section id="news-digest" class="project-card">
+        <img src="assets/newsdigest.jpg" alt="News Digest Project" class="project-img">
+        <h2>News Digest</h2>
+        <p><strong>Description:</strong> News Digest is an AI-powered news summarizer that aggregates articles from multiple sources and generates concise summaries. It allows users to stay informed quickly without reading full-length news articles.</p>
+        <p><strong>Tech Stack:</strong> Python, BeautifulSoup (scraping), Hugging Face Transformers, FastAPI, Streamlit</p>
+        <p><a href="https://github.com/dappatamuno/News_summarizer_agent" target="_blank">🔗 View Repository</a></p>
+      </section>
+
+      <!-- Accomplishments Section -->
+      <section id="accomplishments" class="accomplishments">
+        <h2>Professional Accomplishments</h2>
+        <div class="accomplishments-grid">
+          <!-- Accomplishment 1 -->
+          <div class="accomplishment-card">
+            <img src="assets/nitda.jpg" alt="AI Training" class="accomplishment-img">
+            <h3>AI Training Leadership</h3>
+            <p>I successfully led and conducted a capacity-building program for young Nigerians in partnership with the foremost Nigerian IT Agency - National Information Technology Development Agency (NITDA), and delivered this training as part of NITDA's youth digital skills program.</p>
+            <p><strong>Outcome:</strong> 50+ participants trained across multiple states</p>
+            <a href="https://guardian.ng/technology/firm-trains-youths-on-artificial-intelligence-to-boost-economy/" target="_blank">View Evidence</a>
+          </div>
+          
+          <!-- Accomplishment 2 -->
+          <div class="accomplishment-card">
+            <img src="assets/AUSTGRAD.jpg" alt="AUST Award" class="accomplishment-img">
+            <h3>Overall Best Graduating Student fom the African University of Science and Technology (AUST) 2022</h3>
+            <p>Awarded Valedictorian across all MSc programs. Studied Management of Information Technology in the Computer Science Department.</p>
+            <p>Best Graduating Student for MSc Management of Information Technology</p>
+            <p>Awarded Professor Charles Ejike Chidume Price for Best Overall Student </p>
+          </div>
+          
+          <!-- Accomplishment 3 -->
+          <div class="accomplishment-card">
+            <img src="assets/thesis.jpg" alt="Crop Yield Research" class="accomplishment-img">
+            <h3>How Machine Learning Can Evaluate the Influence Of Socioeconomic And Climatic Factors In Agricultural Yield: A Case Of Nigeria</h3>
+            <p>Three major crops, including cocoa, sesame, and cashew in Nigeria was forecasted in this study using k-nearest neighbors, decision tree, and random forest machine learning method. While applying climatic, agricultural yield, and socioeconomic data and hyper-parameter tweaking technique through cross-validation to enhance the model and avoid overfitting</p>
+            <a href="https://repository.aust.edu.ng/xmlui/bitstream/handle/123456789/5118/Dappa%20Tamuno%20opubo%20%2841051%29.pdf?sequence=1&isAllowed=y" target="_blank">View Research Paper</a>
           </div>
         </div>
-        <div class="project-title">Cloud Movie Engine — End-to-end recommender</div>
-        <div class="tech">Build a movie recommendation system using MovieLens, serve via FastAPI inside Docker, orchestrate with Kubernetes (Minikube), and a React front-end hosted on Vercel.</div>
-        <div class="details">
-          <ul>
-            <li>Train recommender on MovieLens (collaborative filtering + embeddings)</li>
-            <li>FastAPI model serving, Dockerized for portability</li>
-            <li>Kubernetes orchestration for scaling & fault tolerance</li>
-            <li>React UI (hosted on Vercel) consumes the API; includes "Watch on Netflix" CTA mockups</li>
-          </ul>
-        </div>
-        <a class="btn" href="#cloud-code">View code</a>
-      </article>
-
-      <!-- YouTube Summarizer -->
-      <article id="youtube" class="card">
-        <img class="project-img" src="assets/youtube_5summary_history.png" alt="YouTube Summarizer UI" />
-        <div class="project-title">YouTube AI Summarizer</div>
-        <div class="tech">Repo: <code class="code">github.com/dappatamuno/youtube_summarizer</code></div>
-        <div class="details">
-          A web app that accepts a YouTube URL and returns AI-generated summaries. Features include language selection, summary type (video/chapters), and model selector. Backend extracts captions/transcripts, uses an LLM to produce concise summaries, and stores history.
-        </div>
-        <a class="btn" href="#youtube-code">View repo</a>
-      </article>
-
-      <!-- Other projects placeholder (mental health, news digest, pdf chatbot) -->
-      <article id="more" class="card">
-        <div class="project-title">Other projects — Mental Health Chatbot, News Digest, PDF Chatbot</div>
-        <div class="tech">Short previews & tech stacks below. Full details and code can be pulled from your GitHub repos (provide links to each repo for exact READMEs to embed).</div>
-        <div class="details">
-          <strong>Mental Health Chatbot</strong>
-          <p>Conversational agent to provide supportive dialogues and signpost to resources. Uses safe-response filtering, retrieval-augmented generation from a knowledge base, and HIPAA-aware operational constraints where needed.</p>
-          <p><strong>Tech stack</strong>: FastAPI, RAG (FAISS), HuggingFace Transformers or Mistral, moderation + safety pipeline, Docker.</p>
-
-          <strong>News Digest</strong>
-          <p>Automated summarization pipeline that scrapes news sources, clusters articles, and produces daily digests personalized by user interest.</p>
-          <p><strong>Tech stack</strong>: Scrapy or RSS ingestion, newspaper3k, embeddings + FAISS, LLM summarizer, FastAPI + React.</p>
-
-          <strong>PDF Chatbot</strong>
-          <p>Upload PDFs and chat with the content using embeddings + RAG. Supports chunking, OCR fallback, and section-based answers.</p>
-          <p><strong>Tech stack</strong>: PyPDF2 + Tesseract OCR fallback, SentenceTransformers, FAISS, FastAPI, simple React chat UI.</p>
-        </div>
-        <a class="btn" href="#more-code">Get repo links</a>
-      </article>
-    </section>
-
-    <footer>
-      Built by Tamuno Opubo Dappa — AI researcher & product engineer. Replace the avatar.svg with a personal photo at assets/avatar.svg. This site is ready to be deployed on GitHub Pages (dappatamuno.github.io).
-    </footer>
-  </main>
-</div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
