@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dappa Tamuno Opubo — AI Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">Dappa Tamuno Opubo</div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="avatar"><img src="assets/avatar.svg" alt="avatar" style="width:100%;height:100%;display:block"></div>
+      <div>
+        <div style="font-weight:700">Tamuno Opubo Dappa</div>
+        <div style="color:var(--muted); font-size:13px">AI Researcher • ML Engineer • Product Builder</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#applai">Applai Grants</a>
+      <a href="#sunrisal">Sunrisal</a>
+      <a href="#cloud-movie">Cloud Movie Engine</a>
+      <a href="#youtube">YouTube Summarizer</a>
+      <a href="#more">Other Projects</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div>
+        <div class="title">AI Portfolio — Projects & Demos</div>
+        <div class="bio">Practical AI & ML solutions: building open, production-ready systems with a focus on accessibility and impact.</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:700">Available for consulting</div>
+        <div style="color:var(--muted); font-size:13px">Email: <span style='color:inherit'>replace-me@example.com</span></div>
+      </div>
+    </header>
+
+    <section id="home" class="card">
+      <h2 style="margin:0">Featured projects</h2>
+      <p class="details">A curated set of AI projects demonstrating production-ready engineering, containerized microservices, semantic search, and front-end integrations.</p>
+    </section>
+
+    <section class="grid" style="margin-top:18px">
+      <!-- Applai Grants -->
+      <article id="applai" class="card">
+        <img class="project-img" src="assets/kaban-app.png" alt="Applai Grants Kanban UI" />
+        <div class="project-title">Applai Grants — Intelligent Grant Matching & Proposal Generator</div>
+        <div class="tech"><strong>Deliverables</strong>: Containerized AI microservice (FastAPI) with /match and /generate endpoints; FAISS embeddings; PDF parsing pipeline; matching logic; proposal formatter; error samples & retry logic.</div>
+        <div class="details">
+          <strong>What will be built</strong>: A lightweight, modular AI service that connects with Applai's platform to provide smarter grant matching using semantic vector search and tailored proposal generation from user pitch decks and profiles.
+          <ul>
+            <li>Smarter Grant Matching: semantic search + tag blending</li>
+            <li>Proposal Generation: section-by-section proposal drafts using open models</li>
+            <li>PDF Integration & profile enrichment</li>
+          </ul>
+          <strong>Tech stack</strong>: FastAPI (Python), PyPDF2 + OCR fallback, SentenceTransformers embeddings, FAISS (local), Mistral 7B (4-bit quantized), Docker.
+        </div>
+        <a class="btn" href="#applai-code">View code</a>
+      </article>
+
+      <!-- Sunrisal -->
+      <article id="sunrisal" class="card">
+        <img class="project-img" src="assets/sunrisal_dash_home.png" alt="Sunrisal Dashboard" />
+        <div class="project-title">Sunrisal — Machine Learning for Rural Electrification</div>
+        <div class="tech"><strong>Role</strong>: Designing ML-powered customer profiling and PayGo payment plan generation to expand access to solar home systems.</div>
+        <div class="details">
+          Sunrisal combines solar home systems with an ethical ML profiling app to propose customized PayGo payment plans for Nano and MSMEs based on socio-economic factors (income, gender, location). After a tailored plan and downpayment, customers deploy the solar kit to power their business.
+          <p><strong>Suggested tech stack</strong>: FastAPI backend, PostgreSQL (or Supabase R2 for storage), Redis for caching, PyTorch/Transformers for lightweight models, Celery for background jobs, S3-compatible storage (R2), Docker + Kubernetes for deployment, USSD integration (Paga) for payments.</p>
+        </div>
+        <a class="btn" href="#sunrisal-code">View code</a>
+      </article>
+
+      <!-- Cloud Movie Engine -->
+      <article id="cloud-movie" class="card">
+        <div style="height:160px; display:flex; align-items:center; justify-content:center; background:#fff6ed; border-radius:8px;">
+          <div style="text-align:center">
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="56" fill="#111827" opacity="0.06"/>
+              <text x="50%" y="48%" font-size="16" text-anchor="middle" fill="#0b1220" font-weight="700">Cloud</text>
+              <text x="50%" y="70%" font-size="12" text-anchor="middle" fill="#0b1220">Movie Engine</text>
+            </svg>
+          </div>
+        </div>
+        <div class="project-title">Cloud Movie Engine — End-to-end recommender</div>
+        <div class="tech">Build a movie recommendation system using MovieLens, serve via FastAPI inside Docker, orchestrate with Kubernetes (Minikube), and a React front-end hosted on Vercel.</div>
+        <div class="details">
+          <ul>
+            <li>Train recommender on MovieLens (collaborative filtering + embeddings)</li>
+            <li>FastAPI model serving, Dockerized for portability</li>
+            <li>Kubernetes orchestration for scaling & fault tolerance</li>
+            <li>React UI (hosted on Vercel) consumes the API; includes "Watch on Netflix" CTA mockups</li>
+          </ul>
+        </div>
+        <a class="btn" href="#cloud-code">View code</a>
+      </article>
+
+      <!-- YouTube Summarizer -->
+      <article id="youtube" class="card">
+        <img class="project-img" src="assets/youtube_5summary_history.png" alt="YouTube Summarizer UI" />
+        <div class="project-title">YouTube AI Summarizer</div>
+        <div class="tech">Repo: <code class="code">github.com/dappatamuno/youtube_summarizer</code></div>
+        <div class="details">
+          A web app that accepts a YouTube URL and returns AI-generated summaries. Features include language selection, summary type (video/chapters), and model selector. Backend extracts captions/transcripts, uses an LLM to produce concise summaries, and stores history.
+        </div>
+        <a class="btn" href="#youtube-code">View repo</a>
+      </article>
+
+      <!-- Other projects placeholder (mental health, news digest, pdf chatbot) -->
+      <article id="more" class="card">
+        <div class="project-title">Other projects — Mental Health Chatbot, News Digest, PDF Chatbot</div>
+        <div class="tech">Short previews & tech stacks below. Full details and code can be pulled from your GitHub repos (provide links to each repo for exact READMEs to embed).</div>
+        <div class="details">
+          <strong>Mental Health Chatbot</strong>
+          <p>Conversational agent to provide supportive dialogues and signpost to resources. Uses safe-response filtering, retrieval-augmented generation from a knowledge base, and HIPAA-aware operational constraints where needed.</p>
+          <p><strong>Tech stack</strong>: FastAPI, RAG (FAISS), HuggingFace Transformers or Mistral, moderation + safety pipeline, Docker.</p>
+
+          <strong>News Digest</strong>
+          <p>Automated summarization pipeline that scrapes news sources, clusters articles, and produces daily digests personalized by user interest.</p>
+          <p><strong>Tech stack</strong>: Scrapy or RSS ingestion, newspaper3k, embeddings + FAISS, LLM summarizer, FastAPI + React.</p>
+
+          <strong>PDF Chatbot</strong>
+          <p>Upload PDFs and chat with the content using embeddings + RAG. Supports chunking, OCR fallback, and section-based answers.</p>
+          <p><strong>Tech stack</strong>: PyPDF2 + Tesseract OCR fallback, SentenceTransformers, FAISS, FastAPI, simple React chat UI.</p>
+        </div>
+        <a class="btn" href="#more-code">Get repo links</a>
+      </article>
+    </section>
+
+    <footer>
+      Built by Tamuno Opubo Dappa — AI researcher & product engineer. Replace the avatar.svg with a personal photo at assets/avatar.svg. This site is ready to be deployed on GitHub Pages (dappatamuno.github.io).
+    </footer>
+  </main>
+</div>
+</body>
+</html>
